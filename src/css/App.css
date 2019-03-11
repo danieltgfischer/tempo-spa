@@ -8,19 +8,22 @@
   pointer-events: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app-enter {
+  opacity: 0.01;
 }
 
-.App-link {
-  color: #61dafb;
+.app-enter.app-enter-active {
+  opacity: 1;
+  transition: opacity 2000ms ease-in;
+}
+
+.app-leave {
+  opacity: 1;
+}
+
+.app-leave.app-leave-active {
+  opacity: 0.01;
+  transition: opacity 2000ms ease-in;
 }
 
 @keyframes App-logo-spin {
